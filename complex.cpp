@@ -67,13 +67,9 @@ return x;
 }
 complex operator* (complex &a,complex &b)
 {
-double i,j;
-complex a=1;
-complex b=2;
-i=re*a.re-im*b.im;
-j=re*a.im+b.re*im;
-a.re=i;
-b.im=j;
+complex c(0,0);
+c.re=a.re*a.re-b.im*b.im;
+c.im=a.re*b.im+b.re*a.im;
 return c;
 }
 
