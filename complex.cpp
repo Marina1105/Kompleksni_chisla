@@ -30,6 +30,7 @@ public:
     void setmodul(double newmodul);// update re, im
     void alg_to_trig();
     void trig_to_alg();
+    friend ostream& operator <<(ostream&,complex);
     
     void show();
     complex operator=(complex b)
@@ -39,6 +40,11 @@ public:
     }
 };
 
+ostream& operator <<(ostream&out,complex C)
+{
+    out<<C.a<<"*i+"<<C.b<<endl;
+    return out;
+}
 
 complex::complex(double RE, double IM)
 {
